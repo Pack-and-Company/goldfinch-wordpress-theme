@@ -101,8 +101,8 @@ function process_meta_field($post, $key, $value) {
     }
 }
 
-//add_action( 'init', 'create_events_post_type' );
-//add_action('admin_init', 'events_post_type_meta');
-//add_action('save_post' , 'save_events_post_type_meta' , 1, 2);
+add_action( 'init', 'create_events_post_type' );
+add_action('admin_init', 'events_post_type_meta');
+add_action('save_post' , 'save_events_post_type_meta' , 1, 2);
 
 ?>
