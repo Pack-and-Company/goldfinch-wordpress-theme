@@ -64,6 +64,16 @@ function display_custom_field($post, $args) {
 
 add_action('admin_init', 'events_post_type_meta');
 
+function is_iterable($var)
+{
+    return $var !== null 
+        && (is_array($var) 
+            || $var instanceof Traversable 
+            || $var instanceof Iterator 
+            || $var instanceof IteratorAggregate
+            );
+}
+
 function save_events_post_type_meta($post_id , $post) { 
     if ( !wp_verify_nonce($_POST['banner-buttonmeta_noncename'], plugin_basename(__FILE__)) ) {
         return $post->ID; 
@@ -77,9 +87,11 @@ function save_events_post_type_meta($post_id , $post) {
 
     error_log(print_r($_POST));
     foreach ( $meta_field_names as $meta_field ) {
-        foreach ( $_POST[$meta_field] as $key => $value ) {
-            process_meta_field($post, $key, $value);
-        }
+    	if is_iterable($_POST[$meta_field]) {
+	        foreach ( $_POST[$meta_field] as $key => $value ) {
+	            process_meta_field($post, $key, $value);
+	        }
+	    }
     }
 }
 
@@ -101,6 +113,6 @@ function process_meta_field($post, $key, $value) {
     }
 }
 
-add_action( 'save_post' , 'save_events_post_type_meta' , 1, 2);
+add_action('save_post' , 'save_events_post_type_meta' , 1, 2);
 
 ?>
