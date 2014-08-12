@@ -53,6 +53,7 @@ function events_post_type_meta() {
     // add_meta_box( $id, $title, $callback, $post_type, $context, $priority, $callback_args );
     add_meta_box('_event_url', __('Event Url'),     'display_custom_field', 'events', 'side', 'low', array('field_name' => '_event_url'));
     add_meta_box('_event_price', __('Door Charge'), 'display_custom_field', 'events', 'side', 'low', array('field_name' => '_event_price'));
+    add_meta_box('_event_date', __('Date'),         'display_custom_field', 'events', 'side', 'low', array('field_name' => '_event_date'));
     add_meta_box('_event_time', __('Time'),         'display_custom_field', 'events', 'side', 'low', array('field_name' => '_event_time'));
 }
 
@@ -72,7 +73,7 @@ function save_events_post_type_meta($post_id , $post) {
         return $post->ID;
     }
 
-    $meta_field_names = array('_event_url', '_event_price', '_event_time');
+    $meta_field_names = array('_event_url', '_event_price', '_event_date' '_event_time');
 
     error_log(print_r($_POST));
     foreach ( $meta_field_names as $meta_field ) {
@@ -101,7 +102,7 @@ function process_meta_field($post, $key, $value) {
     }
 }
 
-add_action( 'init', 'create_events_post_type' );
+add_action('init', 'create_events_post_type');
 add_action('admin_init', 'events_post_type_meta');
 add_action('save_post' , 'save_events_post_type_meta' , 1, 2);
 
