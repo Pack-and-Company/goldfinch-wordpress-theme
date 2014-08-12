@@ -15,7 +15,8 @@ function my_init_method() {
 }
 add_action('init', 'my_init_method');
 
-# Custom post type with custom fields for events
+
+// Custom post type with custom fields for events
 
 function create_events_post_type() {
 	register_post_type( 'events', 
@@ -47,7 +48,6 @@ function create_events_post_type() {
 		)
 	);
 }
-add_action( 'init', 'create_events_post_type' );
 
 function events_post_type_meta() {
     // add_meta_box( $id, $title, $callback, $post_type, $context, $priority, $callback_args );
@@ -62,9 +62,6 @@ function display_custom_field($post, $args) {
     echo '<input type="hidden" name="banner-buttonmeta_noncename" id="banner-buttonmeta_noncename" value="', wp_create_nonce(plugin_basename(__FILE__)), '" />';
     echo '<input type="text" name="', $args['args']['field_name'], '" value="', $current_value, '" class="widefat" />'; 
 }
-
-add_action('admin_init', 'events_post_type_meta');
-
 
 function save_events_post_type_meta($post_id , $post) { 
     if ( !wp_verify_nonce($_POST['banner-buttonmeta_noncename'], plugin_basename(__FILE__)) ) {
@@ -104,6 +101,8 @@ function process_meta_field($post, $key, $value) {
     }
 }
 
-add_action('save_post' , 'save_events_post_type_meta' , 1, 2);
+//add_action( 'init', 'create_events_post_type' );
+//add_action('admin_init', 'events_post_type_meta');
+//add_action('save_post' , 'save_events_post_type_meta' , 1, 2);
 
 ?>
