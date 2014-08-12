@@ -73,7 +73,7 @@ function save_events_post_type_meta($post_id , $post) {
         return $post->ID;
     }
 
-    $meta_field_names = array('_event_url', '_event_price', '_event_date' '_event_time');
+    $meta_field_names = array('_event_url', '_event_price', '_event_date', '_event_time');
 
     error_log(print_r($_POST));
     foreach ( $meta_field_names as $meta_field ) {
