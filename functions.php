@@ -75,6 +75,7 @@ function save_events_post_type_meta($post_id , $post) {
 
     $meta_field_names = array('_event_url', '_event_price');
 
+    error_log($_POST);
     foreach ( $meta_field_names as $meta_field ) {
         foreach ( $_POST[$meta_field] as $key => $value ) {
             process_meta_field($post, $key, $value);
@@ -89,14 +90,14 @@ function process_meta_field($post, $key, $value) {
 
     $value = implode(',', (array) $value );
 
-    if ( get_post_meta( $post->ID, $key , FALSE) ) { 
-        update_post_meta( $post->ID, $key , $value );
+    if ( get_post_meta($post->ID, $key, FALSE) ) { 
+        update_post_meta($post->ID, $key, $value);
     } else { 
-        add_post_meta( $post->ID, $key , $value );
+        add_post_meta($post->ID, $key ,$value);
     }
     
     if (! $value ) {
-        delete_post_meta( $post->ID, $key );
+        delete_post_meta($post->ID, $key);
     }
 }
 
