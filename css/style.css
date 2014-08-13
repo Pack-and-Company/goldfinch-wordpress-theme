@@ -841,7 +841,7 @@ h1,h2,h3,h4{
 }
 
 #intro{
-	background:url(i../mages/firstBG.jpg) 50% 0 repeat fixed;
+	background:url(../images/firstBG.jpg) 50% 0 repeat fixed;
 	color:#d5ad4d;
 	margin: 0;
 }
@@ -906,7 +906,7 @@ h1,h2,h3,h4{
     }
 
 #third .ct{
-  /*background: url(i../mages/gramophone.png) top left no-repeat;*/
+  /*background: url(../images/gramophone.png) top left no-repeat;*/
   height: 700px;
   margin: 0 auto;
   padding: 0;
@@ -918,7 +918,7 @@ h1,h2,h3,h4{
 }
 
 #fourth{
-	background:#000000 url(i../mages/tile.png) top left repeat fixed;
+	background:#000000 url(../images/tile.png) top left repeat fixed;
 	color: white;
 	margin: 0 auto;
 	overflow: hidden;
@@ -929,7 +929,7 @@ h1,h2,h3,h4{
 
 
 #fifth{
-	background: url(i../mages/thirdBG.jpg) 50% 0 repeat fixed;
+	background: url(../images/thirdBG.jpg) 50% 0 repeat fixed;
 	color: white;
 }
 
@@ -1070,11 +1070,11 @@ RESPONSIVE BACKGROUNDS
 
 @media screen and (min-width : 1600px){
     #intro{
-      background:url(i../mages/firstBG_lrg.jpg) 50% 0 no-repeat fixed;
+      background:url(../images/firstBG_lrg.jpg) 50% 0 no-repeat fixed;
       background-size: 100%;
     }
     #fifth{
-      background:url(i../mages/thirdBG.jpg) 50% 0 repeat fixed;
+      background:url(../images/thirdBG.jpg) 50% 0 repeat fixed;
       background-size: 100%;
     }
 }
@@ -1106,12 +1106,12 @@ RESPONSIVE BACKGROUNDS
 
 @media only screen and (min-device-width : 680px) and (max-device-width : 800px) {
     #intro{
-      background:url(i../mages/firstBG_800.jpg) 50% 0 repeat fixed;
+      background:url(../images/firstBG_800.jpg) 50% 0 repeat fixed;
       background-size: 100%;
       font-family:'CaviarBold';
     }
     #fifth{
-      background:url(i../mages/thirdBG_800.jpg) 50% 0 repeat fixed;
+      background:url(../images/thirdBG_800.jpg) 50% 0 repeat fixed;
       background-size: 100%;
     }
     #intro .mainsection .story{
@@ -1124,7 +1124,7 @@ RESPONSIVE BACKGROUNDS
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 680px) {
     #intro{
-      background:url(i../mages/firstBG_680.jpg) 50% 0 repeat fixed;
+      background:url(../images/firstBG_680.jpg) 50% 0 repeat fixed;
       background-size: 100%;
       font-family:'CaviarBold';
     }
@@ -1138,7 +1138,7 @@ RESPONSIVE BACKGROUNDS
       margin-left:20px;
     }
     #fifth{
-      background:url(i../mages/thirdBG_680.jpg) 50% 0 repeat fixed;
+      background:url(../images/thirdBG_680.jpg) 50% 0 repeat fixed;
       background-size: 100%;
     }
 }
