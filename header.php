@@ -21,11 +21,11 @@
   <link href="<?=get_template_directory_uri();?>/css/style.css" rel="stylesheet" type="text/css" />
   <link href="<?=get_template_directory_uri();?>/css/prettyPhoto.css" rel="stylesheet" media="screen" type="text/css"/>
 
-  <script type="text/javascript" src="<?=get_template_directory_uri();?>/scripts/jquery.localscroll-1.2.7-min.js"></script>
-  <script type="text/javascript" src="<?=get_template_directory_uri();?>/scripts/jquery.scrollTo-1.4.2-min.js"></script>
-  <script type="text/javascript" src="<?=get_template_directory_uri();?>/scripts/jquery.prettyPhoto.js" charset="utf-8"></script>
-  <script type="text/javascript" src="<?=get_template_directory_uri();?>/scripts/jquery.inview.js"></script>
-  <script type="text/javascript" src="<?=get_template_directory_uri();?>/scripts/nbw-parallax.js"></script>
+  <script type="text/javascript" src="<?=get_template_directory_uri();?>/js/jquery.localscroll-1.2.7-min.js"></script>
+  <script type="text/javascript" src="<?=get_template_directory_uri();?>/js/jquery.scrollTo-1.4.2-min.js"></script>
+  <script type="text/javascript" src="<?=get_template_directory_uri();?>/js/jquery.prettyPhoto.js" charset="utf-8"></script>
+  <script type="text/javascript" src="<?=get_template_directory_uri();?>/js/jquery.inview.js"></script>
+  <script type="text/javascript" src="<?=get_template_directory_uri();?>/js/nbw-parallax.js"></script>
 
 </head>
 
