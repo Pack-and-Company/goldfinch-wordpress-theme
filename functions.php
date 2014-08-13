@@ -7,7 +7,6 @@ add_theme_support( 'post-thumbnails' );
 
 function my_init_method() {
   if(!is_admin()) {
-    wp_enqueue_script( 'jquery' );
     wp_register_style( 'global', get_bloginfo('template_directory') . '/css/global.css');
     wp_enqueue_style( 'global' );
   }

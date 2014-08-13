@@ -20,6 +20,7 @@
 
   <link href="<?=get_template_directory_uri();?>/css/prettyPhoto.css" rel="stylesheet" media="screen" type="text/css"/>
 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
   <script type="text/javascript" src="<?=get_template_directory_uri();?>/js/jquery.localscroll-1.2.7-min.js"></script>
   <script type="text/javascript" src="<?=get_template_directory_uri();?>/js/jquery.scrollTo-1.4.2-min.js"></script>
   <script type="text/javascript" src="<?=get_template_directory_uri();?>/js/jquery.prettyPhoto.js" charset="utf-8"></script>
