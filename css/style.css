@@ -693,21 +693,21 @@ body{
 
 @font-face {
     font-family: 'CaviarBold';
-    src: url('font/Caviar_Dreams_Bold-webfont.eot');
-    src: url('font/Caviar_Dreams_Bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('font/Caviar_Dreams_Bold-webfont.woff') format('woff'),
-         url('font/Caviar_Dreams_Bold-webfont.ttf') format('truetype'),
-         url('font/Caviar_Dreams_Bold-webfont.svg#CaviarDreamsBold') format('svg');
+    src: url('../font/Caviar_Dreams_Bold-webfont.eot');
+    src: url('../font/Caviar_Dreams_Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/Caviar_Dreams_Bold-webfont.woff') format('woff'),
+         url('../font/Caviar_Dreams_Bold-webfont.ttf') format('truetype'),
+         url('../font/Caviar_Dreams_Bold-webfont.svg#CaviarDreamsBold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Caviar';
-    src: url('font/CaviarDreams-webfont.eot');
-    src: url('font/CaviarDreams-webfont.eot?#iefix') format('embedded-opentype'),
-         url('font/CaviarDreams-webfont.woff') format('woff'),
-         url('font/CaviarDreams-webfont.ttf') format('truetype'),
-         url('font/CaviarDreams-webfont.svg#CaviarDreams') format('svg');
+    src: url('../font/CaviarDreams-webfont.eot');
+    src: url('../font/CaviarDreams-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/CaviarDreams-webfont.woff') format('woff'),
+         url('../font/CaviarDreams-webfont.ttf') format('truetype'),
+         url('../font/CaviarDreams-webfont.svg#CaviarDreams') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -841,7 +841,7 @@ h1,h2,h3,h4{
 }
 
 #intro{
-	background:url(images/firstBG.jpg) 50% 0 repeat fixed;
+	background:url(i../mages/firstBG.jpg) 50% 0 repeat fixed;
 	color:#d5ad4d;
 	margin: 0;
 }
@@ -906,7 +906,7 @@ h1,h2,h3,h4{
     }
 
 #third .ct{
-  /*background: url(images/gramophone.png) top left no-repeat;*/
+  /*background: url(i../mages/gramophone.png) top left no-repeat;*/
   height: 700px;
   margin: 0 auto;
   padding: 0;
@@ -918,7 +918,7 @@ h1,h2,h3,h4{
 }
 
 #fourth{
-	background:#000000 url(images/tile.png) top left repeat fixed;
+	background:#000000 url(i../mages/tile.png) top left repeat fixed;
 	color: white;
 	margin: 0 auto;
 	overflow: hidden;
@@ -929,7 +929,7 @@ h1,h2,h3,h4{
 
 
 #fifth{
-	background: url(images/thirdBG.jpg) 50% 0 repeat fixed;
+	background: url(i../mages/thirdBG.jpg) 50% 0 repeat fixed;
 	color: white;
 }
 
@@ -1070,11 +1070,11 @@ RESPONSIVE BACKGROUNDS
 
 @media screen and (min-width : 1600px){
     #intro{
-      background:url(images/firstBG_lrg.jpg) 50% 0 no-repeat fixed;
+      background:url(i../mages/firstBG_lrg.jpg) 50% 0 no-repeat fixed;
       background-size: 100%;
     }
     #fifth{
-      background:url(images/thirdBG.jpg) 50% 0 repeat fixed;
+      background:url(i../mages/thirdBG.jpg) 50% 0 repeat fixed;
       background-size: 100%;
     }
 }
@@ -1106,12 +1106,12 @@ RESPONSIVE BACKGROUNDS
 
 @media only screen and (min-device-width : 680px) and (max-device-width : 800px) {
     #intro{
-      background:url(images/firstBG_800.jpg) 50% 0 repeat fixed;
+      background:url(i../mages/firstBG_800.jpg) 50% 0 repeat fixed;
       background-size: 100%;
       font-family:'CaviarBold';
     }
     #fifth{
-      background:url(images/thirdBG_800.jpg) 50% 0 repeat fixed;
+      background:url(i../mages/thirdBG_800.jpg) 50% 0 repeat fixed;
       background-size: 100%;
     }
     #intro .mainsection .story{
@@ -1124,7 +1124,7 @@ RESPONSIVE BACKGROUNDS
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 680px) {
     #intro{
-      background:url(images/firstBG_680.jpg) 50% 0 repeat fixed;
+      background:url(i../mages/firstBG_680.jpg) 50% 0 repeat fixed;
       background-size: 100%;
       font-family:'CaviarBold';
     }
@@ -1138,7 +1138,7 @@ RESPONSIVE BACKGROUNDS
       margin-left:20px;
     }
     #fifth{
-      background:url(images/thirdBG_680.jpg) 50% 0 repeat fixed;
+      background:url(i../mages/thirdBG_680.jpg) 50% 0 repeat fixed;
       background-size: 100%;
     }
 }
@@ -1189,7 +1189,7 @@ RE$PON$IVE NAV $TYLING - taken out 20/12/12 as per MC @ Salt's request
     }
 
       #nav li a:hover, #nav li a.selected{
-        background: url('images/arrow_r.png') center right no-repeat;
+        background: url('../images/arrow_r.png') center right no-repeat;
       }
       
       #nav li.home a img{
