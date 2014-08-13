@@ -18,7 +18,6 @@
 
   <link rel="shortcut icon" href="<?=get_template_directory_uri();?>/images/favicon.ico" type="image/x-icon">
 
-  <link href="<?=get_template_directory_uri();?>/css/style.css" rel="stylesheet" type="text/css" />
   <link href="<?=get_template_directory_uri();?>/css/prettyPhoto.css" rel="stylesheet" media="screen" type="text/css"/>
 
   <script type="text/javascript" src="<?=get_template_directory_uri();?>/js/jquery.localscroll-1.2.7-min.js"></script>
