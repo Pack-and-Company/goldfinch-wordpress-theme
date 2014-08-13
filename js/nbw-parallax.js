@@ -14,6 +14,8 @@ http://www.gnu.org/licenses/gpl.html
 
 $(document).ready(function() { //when the document is ready...
 	$('#nav').localScroll();
+
+	$('#gallery a').attr('rel', 'prettyPhoto[mixed]');
 	
 	$("area[rel^='prettyPhoto']").prettyPhoto();
 	$(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({
