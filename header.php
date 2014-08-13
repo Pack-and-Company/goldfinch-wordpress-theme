@@ -33,12 +33,12 @@
 
 <div id="fblink">
     <a href="https://www.facebook.com/GoldfinchLoungeclub" target="_blank" title="Our facebook page">
-        <img src="images/facebook.png" />
+        <img src="<?=get_template_directory_uri();?>/images/facebook.png" />
     </a>
 </div>
 
 <ul id="nav">
-  <li class="home"><a href="#intro" title="HOME"><img src="images/logo.png" alt="GOLDFINCH" width="120"/></a></li>
+  <li class="home"><a href="#intro" title="HOME"><img src="<?=get_template_directory_uri();?>/images/logo.png" alt="GOLDFINCH" width="120"/></a></li>
     <li><a href="#second" title="Contact">CONTACT</a></li>
     <li><a href="#third" title="Gallery">GALLERY</a></li>
     <li><a href="#fourth" title="Drinks">DRINKS</a></li>
@@ -48,10 +48,10 @@
 <div id="intro" class=""> 
   <div class="mainsection">
         <div class="story">
-            <img src="images/divider.png" class="centered"/><h1 class="">
+            <img src="<?=get_template_directory_uri();?>/images/divider.png" class="centered"/><h1 class="">
             Lounge by day, club by night, offering quality cocktails, champagne &amp; music in plush, intimate surroundings.
             </h1>
-            <img src="images/divider.png" class="centered"/>
+            <img src="<?=get_template_directory_uri();?>/images/divider.png" class="centered"/>
         </div>
     </div>
 </div> <!--#intro-->
@@ -59,7 +59,7 @@
 <div id="second">
     <div class="mainsection">
         <div class="story blue">
-            <img src="images/divider.png" class="centered" width="100%"/>
+            <img src="<?=get_template_directory_uri();?>/images/divider.png" class="centered" width="100%"/>
             <h1>
                 <span class="heavy">Phone:</span> <a class="blue" href="tel:+6493576147">(09) 357 6147</a>
             </h1>
@@ -72,8 +72,8 @@
             <h1>
                 <span class="heavy">Address:</span> 204 Quay St, Auckland.
             </h1>
-            <img src="images/map.jpg" class="centered" width="100%" />
-            <img src="images/divider.png" class="centered" width="100%"/>
+            <img src="<?=get_template_directory_uri();?>/images/map.jpg" class="centered" width="100%" />
+            <img src="<?=get_template_directory_uri();?>/images/divider.png" class="centered" width="100%"/>
         </div>
     </div>
 </div> <!--#second-->
