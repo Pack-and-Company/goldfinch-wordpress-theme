@@ -80,4 +80,4 @@
 
 <div id="third" class="mainsection">
   <div class="story">
-
+    <div class="thumbnails gallery">
