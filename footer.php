@@ -12,7 +12,7 @@
 			<iframe src="<?=$embed_url;?>" style="width:800px; height:500px;" frameborder="0"></iframe>
 		</div><!--PDF-->
     </div> <!--.story-->
-</div> <!--#fourth-->
+</div> <!--#third-->
 
 <a name="whatson"></a>
 <div id="fifth" class="mainsection">
@@ -25,7 +25,7 @@
 		</div>
     </div> <!--.story-->
     <div class="footer"><a href="http://www.mukuna.co.nz/auckland/viaduct/goldfinchbar.htm"><img src="<?=get_template_directory_uri();?>/images/mukuna-trans.png" height="50px" /></a><br /><br /><a href="http://www.saltinteractive.com" target="_blank">site by salt</a></div>
-</div> <!--#whatson-->
+</div> <!--#third-->
 
 <?php wp_footer(); ?>
 </body>
