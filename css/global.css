@@ -1020,18 +1020,18 @@ h1,h2,h3,h4{
     float: left; 
     width:810px;
 }
-   .thumbnails .thumb {
+   .thumbnails p {
       width: 264px;
       float: left; 
       margin:3px;
     }
-      .thumbnails .thumb a {
+      .thumbnails p a {
         float: left;
         display: block;
         width:264px;
         padding: 0; 
       }
-        .thumbnails .thumb a img {
+        .thumbnails p a img {
           width: 260px;
           float: left;
           display: block;
@@ -1044,7 +1044,7 @@ h1,h2,h3,h4{
           border:#d5ad4d solid 2px;
           border:rgba(189,156,78,0.5) solid 2px;
         }
-        .thumbnails .thumb a:hover img {
+        .thumbnails p a:hover img {
           border:#74d0df solid 2px;
         }
         .footer{
