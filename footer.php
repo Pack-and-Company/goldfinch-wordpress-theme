@@ -27,7 +27,7 @@
                 $args = array(
                     'post_type'   => 'events',
                     'post_status' => 'publish',
-                    'sort_column' => 'menu_order',
+                    'orderby'     => 'menu_order',
                 );
                 $events = get_posts( $args );
 
