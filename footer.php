@@ -33,7 +33,7 @@
                 foreach ( $events as $event ) {
                     $door_charge = get_post_meta($event->ID, '_event_price', true);
                     if ( $door_charge != '' ) {
-                        $door_charge = "<br/>$" . $door_charge
+                        $door_charge = "<br/>$" . $door_charge;
                     }
 
                     setup_postdata($event);
