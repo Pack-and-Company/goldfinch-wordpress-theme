@@ -49,10 +49,10 @@ function create_events_post_type() {
 
 function events_post_type_meta() {
     // add_meta_box( $id, $title, $callback, $post_type, $context, $priority, $callback_args );
-    add_meta_box('_event_url', __('Event Url'),     'display_custom_field', 'events', 'side', 'low', array('field_name' => '_event_url'));
-    add_meta_box('_event_price', __('Door Charge'), 'display_custom_field', 'events', 'side', 'low', array('field_name' => '_event_price'));
     add_meta_box('_event_date', __('Date'),         'display_custom_field', 'events', 'side', 'low', array('field_name' => '_event_date'));
     add_meta_box('_event_time', __('Time'),         'display_custom_field', 'events', 'side', 'low', array('field_name' => '_event_time'));
+    add_meta_box('_event_price', __('Door Charge'), 'display_custom_field', 'events', 'side', 'low', array('field_name' => '_event_price'));
+    add_meta_box('_event_url', __('Event Url'),     'display_custom_field', 'events', 'side', 'low', array('field_name' => '_event_url'));
 }
 
 function display_custom_field($post, $args) {
