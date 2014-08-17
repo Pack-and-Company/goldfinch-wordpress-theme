@@ -28,6 +28,7 @@
                     'post_type'   => 'events',
                     'post_status' => 'publish',
                     'orderby'     => 'menu_order',
+                    'order'       => 'ASC',
                 );
                 $events = get_posts( $args );
 
