@@ -29,12 +29,12 @@
                     'post_status'      => 'publish',
                 );
                 $events = get_posts( $args );
-                
+
                 foreach ( $events as $event ) {
                     setup_postdata($event);
                         printf('<div class="event" data-id="eventID">');
-                        printf('    <div class="info"><span class="title"><a href="%s">%s</a></span></div>', get_post_meta( get_the_ID(), '_event_url', true), the_title());
-                        printf('    <div class="info"><span class="deets">%s</span><br/><span class="deets">%s<br/>$%s</span></div>', get_post_meta( get_the_ID(), '_event_date', true, get_post_meta( get_the_ID(), '_event_time', true, get_post_meta( get_the_ID(), '_event_price', true);
+                        printf('    <div class="info"><span class="title"><a href="%s">%s</a></span></div>', get_post_meta($event->ID, '_event_url', true), the_title());
+                        printf('    <div class="info"><span class="deets">%s</span><br/><span class="deets">%s<br/>$%s</span></div>', get_post_meta($event->ID, '_event_date', true), get_post_meta($event->ID, '_event_time', true), get_post_meta($event->ID, '_event_price', true));
                         printf('    <div class="image"><img src="%s" /></div>', the_post_thumbnail());
                         printf('    <div class="dots"><img src="http://clients.saltinteractive.com/goldfinch/images/dots.png" /></div>');
                         printf('</div>');
