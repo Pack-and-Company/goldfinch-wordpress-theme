@@ -44,7 +44,7 @@
 			</div>
 		</div>
     </div> <!--.story-->
-    <div class="footer"><a href="http://www.mukuna.co.nz/auckland/viaduct/goldfinchbar.htm"><img src="<?=get_template_directory_uri();?>/images/mukuna-trans.png" height="50px" /></a><br /><br /><a href="http://www.saltinteractive.com" target="_blank">site by salt</a></div>
+    <div class="footer"><a href="http://www.saltinteractive.com" target="_blank">site by salt</a></div>
 </div> <!--#third-->
 
 <?php wp_footer(); ?>
