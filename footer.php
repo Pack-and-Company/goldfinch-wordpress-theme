@@ -31,6 +31,11 @@
                 $events = get_posts( $args );
 
                 foreach ( $events as $event ) {
+                    $event_time = get_post_meta($event->ID, '_event_time', true);
+                    if ( $event_time != '' ){
+                        $event_time = "<br/>" . $event_time;
+                    }
+
                     $door_charge = get_post_meta($event->ID, '_event_price', true);
                     if ( $door_charge != '' ) {
                         $door_charge = "<br/>$" . $door_charge;
@@ -39,7 +44,7 @@
                     setup_postdata($event);
                         printf('<div class="event" data-id="eventID">');
                         printf('    <div class="info"><span class="title"><a href="%s">%s</a></span></div>', get_post_meta($event->ID, '_event_url', true), $event->post_title);
-                        printf('    <div class="info"><span class="deets">%s</span><br/><span class="deets">%s%s</span></div>', get_post_meta($event->ID, '_event_date', true), get_post_meta($event->ID, '_event_time', true), $door_charge);
+                        printf('    <div class="info"><span class="deets">%s</span><span class="deets">%s%s</span></div>', get_post_meta($event->ID, '_event_date', true), $event_time, $door_charge);
                         printf('    <div class="image">%s</div>', get_the_post_thumbnail($event->ID, array(300,425)));
                         printf('    <div class="dots"><img src="%s/images/dots.png" /></div>', get_template_directory_uri());
                         printf('</div>');
