@@ -983,6 +983,7 @@ h1,h2,h3,h4{
         -webkit-border-radius: 2px;
         -moz-border-radius: 2px;
         outline:none;
+        margin-bottom: 10px;
       }
       #events .event .info{
         width:100%;
@@ -1012,7 +1013,7 @@ h1,h2,h3,h4{
         width:100%;
         float:left;
         clear:left;
-        margin:15px 0 0 0;
+        margin: 0;
       }
 
 .thumbnails {
