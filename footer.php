@@ -41,7 +41,7 @@
                         printf('    <div class="info"><span class="title"><a href="%s">%s</a></span></div>', get_post_meta($event->ID, '_event_url', true), $event->post_title);
                         printf('    <div class="info"><span class="deets">%s</span><br/><span class="deets">%s%s</span></div>', get_post_meta($event->ID, '_event_date', true), get_post_meta($event->ID, '_event_time', true), $door_charge);
                         printf('    <div class="image">%s</div>', get_the_post_thumbnail($event->ID, array(300,425)));
-                        printf('    <div class="dots"><img src="http://clients.saltinteractive.com/goldfinch/images/dots.png" /></div>');
+                        printf('    <div class="dots"><img src="%s/images/dots.png" /></div>', get_template_directory_uri());
                         printf('</div>');
                 }
                 wp_reset_postdata();
