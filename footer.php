@@ -47,6 +47,7 @@
                         printf('    <div class="info"><span class="title"><a href="%s">%s</a></span></div>', get_post_meta($event->ID, '_event_url', true), $event->post_title);
                         printf('    <div class="info"><span class="deets">%s</span><span class="deets">%s%s</span></div>', get_post_meta($event->ID, '_event_date', true), $event_time, $door_charge);
                         printf('    <div class="image">%s</div>', get_the_post_thumbnail($event->ID, array(300,425)));
+                        printf('    <div class="info"><span class="deets">%s</span></div>', $event->post_content);
                         printf('    <div class="dots"><img src="%s/images/dots.png" /></div>', get_template_directory_uri());
                         printf('</div>');
                 }
