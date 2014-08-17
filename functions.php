@@ -47,6 +47,33 @@ function create_events_post_type() {
 	);
 }
 
+
+function events_custom_columns($columns) {
+    $columns = array(
+        'cb' => '<input type="checkbox" />',
+        'title' => __( 'Title' ),
+        '_event_date' => __( 'Date' ),
+        '_event_time' => __( 'Time' ),
+        '_event_price' => __( 'Price' ),
+    );
+
+    return $columns;
+}
+
+function events_manage_custom_columns($column, $post_id) {
+    global $post;
+
+    $column_value = get_post_meta($post_id, $column, true);
+
+    if ( empty( $column_value ) ) {
+        echo __( '' );
+    }
+    else {
+        printf( __( '%s' ), $column_value );
+    }
+
+}
+
 function events_post_type_meta() {
     // add_meta_box( $id, $title, $callback, $post_type, $context, $priority, $callback_args );
     add_meta_box('_event_date', __('Date'),         'display_custom_field', 'events', 'side', 'low', array('field_name' => '_event_date'));
@@ -102,6 +129,8 @@ function process_meta_field($post, $key, $value) {
 
 add_action('init', 'create_events_post_type');
 add_action('admin_init', 'events_post_type_meta');
+add_filter('manage_edit-events_columns', 'events_custom_columns');
+add_action('manage_events_posts_custom_column', 'events_manage_custom_columns', 10, 2);
 add_action('save_post' , 'save_events_post_type_meta' , 1, 2);
 
 ?>
