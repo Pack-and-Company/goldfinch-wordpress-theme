@@ -63,7 +63,7 @@ function events_custom_columns($columns) {
 function events_manage_custom_columns($column, $post_id) {
     global $post;
 
-    if ( substr($column, 0) === "_" ) {
+    if ( substr($column, 0, 1) == "_" ) {
         $column_value = get_post_meta($post_id, $column, true);
         if ( empty( $column_value ) ) {
             echo __( '' );
@@ -129,7 +129,6 @@ function process_meta_field($post, $key, $value) {
 
 add_action('init', 'create_events_post_type');
 add_action('admin_init', 'events_post_type_meta');
-#add_filter('manage_edit-events_columns', 'events_custom_columns');
 add_filter('manage_events_posts_columns', 'events_custom_columns');
 add_action('manage_events_posts_custom_column', 'events_manage_custom_columns', 10, 2);
 add_action('save_post' , 'save_events_post_type_meta' , 1, 2);
