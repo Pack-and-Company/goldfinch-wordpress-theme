@@ -63,12 +63,14 @@ function events_custom_columns($columns) {
 function events_manage_custom_columns($column, $post_id) {
     global $post;
 
-    $column_value = get_post_meta($post_id, $column, true);
-    if ( empty( $column_value ) ) {
-        echo __( '' );
-    }
-    else {
-        printf( __( '%s' ), $column_value );
+    if ( substr($column, 0) === "_" ) {
+        $column_value = get_post_meta($post_id, $column, true);
+        if ( empty( $column_value ) ) {
+            echo __( '' );
+        }
+        else {
+            printf( __( '%s' ), $column_value );
+        }
     }
 }
 
