@@ -50,7 +50,7 @@ function create_events_post_type() {
 
 function events_custom_columns($columns) {
     $columns = array(
-        'menu_order' => __( 'Order' ),
+        'menu_order' => __( '' ),
         'cb' => '<input type="checkbox" />',
         'title' => __( 'Title' ),
         '_event_date' => __( 'Date' ),
