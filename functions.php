@@ -50,6 +50,7 @@ function create_events_post_type() {
 
 function events_custom_columns($columns) {
     $columns = array(
+        'menu_order' => __( 'Order' ),
         'cb' => '<input type="checkbox" />',
         'title' => __( 'Title' ),
         '_event_date' => __( 'Date' ),
@@ -63,15 +64,28 @@ function events_custom_columns($columns) {
 function events_manage_custom_columns($column, $post_id) {
     global $post;
 
-    $column_value = get_post_meta($post_id, $column, true);
-
-    if ( empty( $column_value ) ) {
-        echo __( '' );
+    switch ($column) {
+        case 'menu-order':
+            $order = $post->menu_order;
+            echo $order;
+            break;
+        default:
+            $column_value = get_post_meta($post_id, $column, true);
+            if ( empty( $column_value ) ) {
+                echo __( '' );
+            }
+            else {
+                printf( __( '%s' ), $column_value );
+            }
+            break;
     }
-    else {
-        printf( __( '%s' ), $column_value );
-    }
 
+
+}
+
+function events_custom_columns_register_sortable($columns){
+  $columns['menu_order'] = 'menu_order';
+  return $columns;
 }
 
 function events_post_type_meta() {
@@ -131,6 +145,7 @@ add_action('init', 'create_events_post_type');
 add_action('admin_init', 'events_post_type_meta');
 add_filter('manage_edit-events_columns', 'events_custom_columns');
 add_action('manage_events_posts_custom_column', 'events_manage_custom_columns', 10, 2);
+add_filter('manage_edit-events_sortable_columns','events_custom_columns_register_sortable');
 add_action('save_post' , 'save_events_post_type_meta' , 1, 2);
 
 ?>
