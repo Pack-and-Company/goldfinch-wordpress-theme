@@ -129,8 +129,9 @@ function process_meta_field($post, $key, $value) {
 
 add_action('init', 'create_events_post_type');
 add_action('admin_init', 'events_post_type_meta');
-add_filter('manage_edit-events_columns', 'events_custom_columns');
-add_action('manage_events_posts_custom_column', 'events_manage_custom_columns', 15, 2);
+#add_filter('manage_edit-events_columns', 'events_custom_columns');
+add_filter('manage_events_posts_columns', 'events_custom_columns');
+add_action('manage_events_posts_custom_column', 'events_manage_custom_columns', 10, 2);
 add_action('save_post' , 'save_events_post_type_meta' , 1, 2);
 
 ?>
