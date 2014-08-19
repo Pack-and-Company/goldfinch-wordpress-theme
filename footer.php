@@ -40,7 +40,10 @@
 
                     $door_charge = get_post_meta($event->ID, '_event_price', true);
                     if ( $door_charge != '' ) {
-                        $door_charge = "<br/>$" . $door_charge;
+                        if ( substr($door_charge, 0, 1) != "$" ) {
+                            $door_charge = "$" . $door_charge;
+                        }
+                        $door_charge = "<br/>" . $door_charge;
                     }
 
                     setup_postdata($event);
